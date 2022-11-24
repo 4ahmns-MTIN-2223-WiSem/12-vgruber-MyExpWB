@@ -153,7 +153,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1691477856}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &36864664
 MeshRenderer:
@@ -234,7 +234,6 @@ Transform:
   - {fileID: 1476197884}
   - {fileID: 1398147570}
   - {fileID: 1333738788}
-  - {fileID: 1439724419}
   - {fileID: 1691477856}
   - {fileID: 667296357}
   m_Father: {fileID: 0}
@@ -269,7 +268,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 88209218}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &667296358
 MonoBehaviour:
@@ -458,7 +457,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1691477856}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1333738784
 GameObject:
@@ -492,8 +491,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.988071, y: 5.051388, z: 3.4732127}
+  m_Center: {x: 0.065449, y: 2.025694, z: -0.2717297}
 --- !u!23 &1333738786
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -551,7 +550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333738784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.134542, y: 5.3682976, z: 30.049475}
+  m_LocalPosition: {x: -21, y: 5, z: 30.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1471015181}
@@ -693,13 +692,15 @@ GameObject:
   - component: {fileID: 1439724418}
   - component: {fileID: 1439724417}
   - component: {fileID: 1439724416}
+  - component: {fileID: 1439724421}
+  - component: {fileID: 1439724420}
   m_Layer: 0
   m_Name: St. Nikolaus Stecken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1439724416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -770,12 +771,44 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439724415}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.624542, y: 5.3682976, z: 21.599476}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.73, y: 0.86170244, z: 1.2700005}
+  m_LocalScale: {x: 0.1, y: 3.4884, z: 0.1}
   m_Children: []
-  m_Father: {fileID: 88209218}
-  m_RootOrder: 3
+  m_Father: {fileID: 1691477856}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1439724420
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439724415}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5eb0a8abb70e4f046894e6fb5d04729d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1439724421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439724415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007cf8043c63bb4cb7af0d234ec8dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animStick: {fileID: 1439724420}
 --- !u!1001 &1471015180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -805,15 +838,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: d19f0e375a0203a4ca72964404dbd39e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5514107
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: d19f0e375a0203a4ca72964404dbd39e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: d19f0e375a0203a4ca72964404dbd39e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.293333
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: d19f0e375a0203a4ca72964404dbd39e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -843,6 +876,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: d19f0e375a0203a4ca72964404dbd39e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 46b863770b0b07a41b0bd29637994634, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19f0e375a0203a4ca72964404dbd39e, type: 3}
 --- !u!4 &1471015181 stripped
@@ -862,6 +899,7 @@ GameObject:
   - component: {fileID: 1476197883}
   - component: {fileID: 1476197882}
   - component: {fileID: 1476197881}
+  - component: {fileID: 1476197885}
   m_Layer: 0
   m_Name: Nikolaus
   m_TagString: Untagged
@@ -880,8 +918,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0.4925714, z: 0.12828612}
+  m_Size: {x: 1.740392, y: 1.3391323, z: 1.6282029}
+  m_Center: {x: -0.12980402, y: 0.16213751, z: 0.00556612}
 --- !u!23 &1476197882
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -945,6 +983,19 @@ Transform:
   m_Father: {fileID: 88209218}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1476197885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476197880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa8b79f2a7df2f4f82087b62f1801dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NikoStick: {fileID: 1439724415}
 --- !u!1 &1691477855
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,7 +1007,6 @@ GameObject:
   - component: {fileID: 1691477856}
   - component: {fileID: 1691477858}
   - component: {fileID: 1691477857}
-  - component: {fileID: 1691477859}
   m_Layer: 0
   m_Name: FPSPlayer
   m_TagString: Untagged
@@ -972,13 +1022,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691477855}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.074543, y: 5.8682976, z: 30.049475}
+  m_LocalPosition: {x: -20.72, y: 5.8682976, z: 25.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1439724419}
   - {fileID: 963194228}
   - {fileID: 36864662}
   m_Father: {fileID: 88209218}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1691477857
 MonoBehaviour:
@@ -1018,19 +1069,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &1691477859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691477855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa8b79f2a7df2f4f82087b62f1801dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NikoStick: {fileID: 1439724415}
 --- !u!1 &1920336069
 GameObject:
   m_ObjectHideFlags: 0

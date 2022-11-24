@@ -6,6 +6,8 @@ public class Manager : MonoBehaviour
 {
     public List<bool> TasksActivated;
 
+    public 
+
     // Start is called before the first frame update
     void Start()
     {
