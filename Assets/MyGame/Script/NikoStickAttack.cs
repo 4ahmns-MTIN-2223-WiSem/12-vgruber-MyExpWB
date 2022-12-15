@@ -26,7 +26,6 @@ public class NikoStickAttack : MonoBehaviour
 
     public void PlayerAttack()
     {
-        Debug.Log("hit");
         animStick.SetBool("isAttacking", true);
     }
 
