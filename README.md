@@ -11,3 +11,6 @@ foreach, list, enum
 Konnte nicht richtig playtesten, NikolausStickAttack Isn't needed in VR.
 Stick should be attached to Hand but I made the Game for 3D so it's put on the Camera.
 Krampus doesn't attack back, no Display of the current task.
+
+Hier Krampus Asset:
+https://assetstore.unity.com/packages/3d/characters/creatures/golemmonster-33260
