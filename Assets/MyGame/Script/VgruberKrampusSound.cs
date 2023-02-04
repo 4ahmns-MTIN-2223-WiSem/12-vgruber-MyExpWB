@@ -8,14 +8,30 @@ public class VgruberKrampusSound : MonoBehaviour
     public AudioSource source;
     public bool hasDied;
 
+    bool whichSound = true;
+
     private void Start()
     {
         hasDied = false;
+        foreach (AudioClip item in sounds)
+        {
+            Debug.Log("Audio Clips for Krampus");
+        }
     }
 
     public void HitSound()
     {
-        source.clip = sounds[0];
+        if (whichSound)
+        {
+            source.clip = sounds[0];
+            whichSound = false;
+        }
+
+        else
+        {
+            source.clip = sounds[1];
+            whichSound = true;
+        }
         source.Play();
     }
 
@@ -25,11 +41,6 @@ public class VgruberKrampusSound : MonoBehaviour
         {
             source.clip = sounds[3];
             source.Play();
-        }
-
-        if (hasDied)
-        {
-            
         }
     }
 }

@@ -2,21 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum KState{
+public enum KState
+{
     Idle,
     Following,
-    Attack
+    Attack,
+    Dead
 }
 
 public class VgruberKrampusEnemy : MonoBehaviour
 {
-    public KState AKState;
-    public Collider colliderW;
-    public Material material;
-    public Animator krampusA;
+    private KState AKState;
+    [SerializeField] Collider colliderW;
+    [SerializeField] Material material;
+    [SerializeField] Animator krampusA;
 
-    public VgruberKrampusSound soundManager;
-    public VgruberManager manager;
+    [SerializeField] VgruberKrampusSound soundManager;
+    [SerializeField] VgruberManager manager;
 
     [SerializeField] float healthK = 150f;
 
@@ -32,9 +34,9 @@ public class VgruberKrampusEnemy : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        Debug.Log(collision.impulse);
-        
-        if(collision.collider == colliderW)
+        Debug.Log(collision.impulse); //Future ME: ? Add Min Impulse for Hit
+
+        if (collision.collider == colliderW)
         {
             healthK = healthK - RandomDamage();
 
@@ -62,6 +64,9 @@ public class VgruberKrampusEnemy : MonoBehaviour
 
             case KState.Following:
                 break;
+            case KState.Dead:
+                material.color = Color.black;
+                break;
         }
     }
 
@@ -75,13 +80,17 @@ public class VgruberKrampusEnemy : MonoBehaviour
 
     private void DeathCheck()
     {
-        if(healthK <= 0)
+        if (healthK <= 0)
         {
             Debug.Log("dead");
             krampusA.SetBool("Die", true);
 
-            soundManager.DeathSound();
+            soundManager.DeathSound();  //sound managemet
             soundManager.hasDied = true;
+
+
+            AKState = KState.Dead;      //state management
+            StateSwitched(AKState);
 
             healthK = 0;
 

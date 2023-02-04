@@ -4,29 +4,33 @@ using UnityEngine;
 
 public class VgruberNikolausTask : MonoBehaviour
 {
-    public GameObject NikoStick;
+    [SerializeField] GameObject NikoStick;
     [SerializeField] GameObject gutti;
-    public Collision stNicolas;
-    public Animator anim;
-    public AudioSource nico;
+    [SerializeField] Collision stNicolas;
+    [SerializeField] Animator anim;
+    [SerializeField] AudioSource nico;
+
+    [SerializeField] VgruberManager manager;
 
     private bool weaponActive = false;
 
-    private void OnTriggerEnter(Collider other)
-     {
-        Debug.Log("quest start");
 
+    private void OnTriggerEnter(Collider other)
+    {
         if (!weaponActive)
         {
             NikoStick.SetActive(true);
-            nico.enabled = true; 
+            nico.enabled = true;
+            manager.KillTask();
+
         }
 
-      if (anim.GetBool("Die"))
+        if (anim.GetBool("Die"))
         {
             gutti.SetActive(true);
+            manager.tasks[1] = new VgruberTask("Kill Krampus!", true);
         }
-     }
+    }
 
 
 

@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class VgruberManager : MonoBehaviour
 {
-    public List<bool> TasksSet;
     public VgruberKrampusEnemy krScript1;
     public VgruberKrampusSound krScript2;
+    public List<VgruberTask> tasks;
+
+    private void Start()
+    {
+        tasks.Add(new VgruberTask("Talk to St. Nikolaus", false));
+    }
+
+    public void KillTask()
+    {
+        tasks[0] = new VgruberTask("Talk to St. Nikolaus", true);
+        tasks.Add(new VgruberTask("Kill Krampus!", false));
+    }
+
 
     public void DisableAfterDeath()
     {
@@ -14,5 +26,5 @@ public class VgruberManager : MonoBehaviour
         krScript2.enabled = false;
     }
 
-   
+
 }
